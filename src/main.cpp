@@ -12,6 +12,7 @@ int main() {
         if( btn.read() ) flashing = true;
             else         flashing = false;
 
+        printf("button %d\n", btn.read() );
         if(flashing){
             red.write(0);
             wait(0.5);
@@ -19,6 +20,7 @@ int main() {
             wait(0.5);
         }else{
             red.write(1);
+            wait(1);
         }
     }
 }
